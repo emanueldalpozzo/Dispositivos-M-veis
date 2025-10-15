@@ -1,10 +1,58 @@
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity, StyleSheet, Button } from 'react-native'
 import React from 'react'
+import { useRouter } from 'expo-router'
 
 export default function feed() {
+  const router = useRouter();
+  const handlePress = () =>{
+    router.push('/')
+  }
+
   return (
-    <View>
+    <View style={styles.container}>
       <Text>feed</Text>
+      <TouchableOpacity style={styles.editButton} onPress={handlePress}>
+        <Text style={styles.editButtonText}>Tela Home</Text>
+      </TouchableOpacity>
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    paddingHorizontal: 20,
+  },
+ 
+  name: {
+    fontSize: 22,
+    fontWeight: 'bold',
+  },
+  username: {
+    fontSize: 16,
+    color: '#777',
+    marginBottom: 10,
+  },
+  bio: {
+    fontSize: 14,
+    textAlign: 'center',
+    marginBottom: 20,
+  },
+  editButton: {
+  backgroundColor: '#0067ee',
+  paddingVertical: 10,
+  paddingHorizontal: 20,
+  borderRadius: 8,
+  marginTop: 20,
+  alignSelf: 'center', 
+},
+
+editButtonText: {
+  color: '#fff',
+  fontWeight: 'bold',
+  textAlign: 'center',
+},
+});

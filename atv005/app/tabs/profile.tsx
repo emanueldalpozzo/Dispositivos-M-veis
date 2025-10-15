@@ -1,5 +1,6 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import React from 'react'
+import { useRouter } from 'expo-router'
 
 export default function profile() {
     const user = {
@@ -9,14 +10,17 @@ export default function profile() {
         username: "emanue@"
     }
 
-    
+    const router = useRouter();
+    const handlePress = () =>{
+      router.push('/')
+    }
   return (
     <View>
        <Text style={styles.name}>{user.name}</Text>
       <Text style={styles.username}>{user.username}</Text>
       <Text style={styles.bio}>{user.bio}</Text>
-      <TouchableOpacity  style={styles.editButton}>
-         <Text style={styles.editButtonText}>EDITAR PERFIL</Text>
+      <TouchableOpacity  style={styles.editButton} onPress={handlePress}>
+         <Text style={styles.editButtonText}>Home</Text>
       </TouchableOpacity>
     </View>
   )

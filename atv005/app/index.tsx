@@ -19,6 +19,7 @@ export default function index() {
       <Button title='Tela B' onPress={handlePress}/>
       <Link href={{pathname: '/post/[id]', params:{id: randomId}}}> Tela Dinamica. Ir para o post {randomId} </Link>
       <Link href='/tabs/profile'>Tela de Usuário</Link>
+      <Link href='/tabs/feed'>Post</Link>
     </View>
 
     
