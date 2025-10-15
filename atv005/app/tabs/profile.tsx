@@ -1,0 +1,62 @@
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
+import React from 'react'
+
+export default function profile() {
+    const user = {
+        name: "Emanuel",
+        age: '23',
+        bio: 'Estudante de sistemas para internet',
+        username: "emanue@"
+    }
+
+    
+  return (
+    <View>
+       <Text style={styles.name}>{user.name}</Text>
+      <Text style={styles.username}>{user.username}</Text>
+      <Text style={styles.bio}>{user.bio}</Text>
+      <TouchableOpacity  style={styles.editButton}>
+         <Text style={styles.editButtonText}>EDITAR PERFIL</Text>
+      </TouchableOpacity>
+    </View>
+  )
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    paddingHorizontal: 20,
+  },
+ 
+  name: {
+    fontSize: 22,
+    fontWeight: 'bold',
+  },
+  username: {
+    fontSize: 16,
+    color: '#777',
+    marginBottom: 10,
+  },
+  bio: {
+    fontSize: 14,
+    textAlign: 'center',
+    marginBottom: 20,
+  },
+  editButton: {
+  backgroundColor: '#0067ee',
+  paddingVertical: 10,
+  paddingHorizontal: 20,
+  borderRadius: 8,
+  marginTop: 20,
+  alignSelf: 'center', // faz o botão ter só o tamanho do conteúdo
+},
+
+editButtonText: {
+  color: '#fff',
+  fontWeight: 'bold',
+  textAlign: 'center',
+},
+});
