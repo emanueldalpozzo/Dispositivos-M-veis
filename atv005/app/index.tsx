@@ -15,8 +15,8 @@ export default function index() {
       <Text style={styles.title}>Página Inicial</Text>
 
       <View style={styles.linksContainer}>
-        <Link href='/screenA' style={styles.link}>Tela A</Link>
-        <Link href='/screenB' style={styles.link}>Tela B</Link>
+        <Link href='/screenA' style={styles.link}>Tela A.</Link>
+        <Link href='/screenB' style={styles.link}>Tela B.</Link>
         <Button title='Ir para Tela B' onPress={handlePress} />
         <Link href='/(tabs)/profile' style={styles.link}>Tela de Usuário</Link>
         <Link href='/(tabs)/feed' style={styles.link}>Post</Link>
