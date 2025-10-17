@@ -7,16 +7,8 @@ export default function StackLayout() {
       headerStyle: {backgroundColor:'#0067eeff'},
       headerTitleAlign: 'center',
       headerTintColor: '#fff',
-      headerShown: false
       
     }}>
-
-    <Stack.Screen
-      name="post/[id]"
-      options={({ route }: {route:{params?:{id?:string}}}) => ({
-      title: `Post ${route.params?.id || 'Desconhecido'}`,
-  })}
-/>
 
       <Stack.Screen
         name = "index"
@@ -38,7 +30,9 @@ export default function StackLayout() {
           title: "Tela B"
         }}
       />
-      
+      <Stack.Screen 
+        name='(tabs)' options={{headerShown: false}}
+      />
     </Stack>
 
  
