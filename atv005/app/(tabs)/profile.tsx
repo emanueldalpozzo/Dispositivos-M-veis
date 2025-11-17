@@ -15,7 +15,7 @@ export default function profile() {
       router.push('/')
     }
   return (
-    <View>
+    <View style={styles.container}>
        <Text style={styles.name}>{user.name}</Text>
       <Text style={styles.username}>{user.username}</Text>
       <Text style={styles.bio}>{user.bio}</Text>
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   paddingHorizontal: 20,
   borderRadius: 8,
   marginTop: 20,
-  alignSelf: 'center', // faz o botão ter só o tamanho do conteúdo
+  alignSelf: 'center', 
 },
 
 editButtonText: {
